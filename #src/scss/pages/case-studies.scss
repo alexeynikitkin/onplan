@@ -1,5 +1,5 @@
 .case-studies{
-    .quickbooks {
+.quickbooks {
         padding: 0 0 40px 0;
         position: relative;
         max-width: 1440px;
@@ -45,9 +45,6 @@
             }
         }
     
-        &__content {
-        }
-    
         .content {
             display: flex;
             justify-content: space-between;
@@ -78,12 +75,7 @@
                 }
             }
         
-            &__case-studies {
-            }
-        
-            &__img {
-            }
-            .case-studies {
+            .studies {
             
                 &__img {
                     position: relative;
@@ -97,6 +89,7 @@
                     box-sizing: content-box;
                     img{
                         position: relative;
+                        border-radius: 40px;
                         z-index: 2;
                         width: 100%;
                         height: 100%;
@@ -115,6 +108,385 @@
                     }
                 }
             }
+        }
+}
+.about {
+        padding: 120px 0 55px 0;
+        background: $light-blue-gradien;
+		&__content {
+            display: flex;
+            flex-direction: column;
+            position: relative;
+            max-width: 1160px;
+            margin: 0 auto;
+		}
+
+        &__block{
+            display: flex;
+            justify-content: space-between;
+            margin: 0 0 64px 0;
+            position: relative;
+            z-index: 2;
+            &:last-child{
+                margin: 0;
+            }
+            h3{
+                color: $whitecolor;
+                margin: 0 30px 0 0;
+                min-width: 350px;
+            }
+        }
+
+		&__text {
+            max-width: 640px;
+            p{
+                font-size: 18px;
+                line-height: 29px;
+                color: $whitecolor;
+                margin: 20px 0 0 0;
+                &:first-child{
+                    margin: 0;
+                }
+            }
+            h4{
+                font-size: 20px;
+                line-height: 24px;
+            }
+		}
+
+        &__bg{
+            position: absolute;
+            width: 562px;
+            height: 562px;
+            left: -42px;
+            bottom: -202px;
+            img{
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+        }
+}
+.models {
+margin: 96px 0 120px 0;
+    &__content {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        h2{
+            margin: 0 0 24px 0;
+        }
+        p{
+            font-size: 22px;
+            line-height: 33px;
+            font-weight: 600;
+            max-width: 640px;
+            margin: 0 auto;
+        }
+    }
+    .table{
+        width: 100%;
+        &__row{
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            h3{
+                position: relative;
+                padding: 32px 0 0 0;
+                &:before{
+                    content: '';
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    width: 58px;
+                    height: 6px;
+                    border-radius: 8px;
+                }
+                &.purple{
+                    &:before{
+                        background: $purplecolor;
+                    }
+                }
+                &.green{
+                    &:before{
+                        background: $greencolor;
+                    }
+                }
+            }
+        }
+    }
+}
+.comments {
+    background: $purplegradient;
+    padding: 120px 0;
+    h2{
+        text-align: center;
+        color: $whitecolor;
+        margin: 0 0 40px 0;
+    }
+    &__content {
+        max-width: 1120px;
+        margin: 0 auto;
+        background: rgba(255, 255, 255, 0.15);
+        border-radius: 40px;
+        display: flex;
+        justify-content: space-between;
+        padding: 40px 40px 40px 58px;
+    }
+
+    &__left-side {
+        max-width: 100%;
+        width: 100%;
+        margin: 0 20px 0 0;
+    }
+
+    &__img {
+        width: 100%;
+        height: 100%;
+        max-width: 370px;
+        max-height: 370px;
+        border-radius: 30px;
+        overflow: hidden;
+        img{
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        &.mobile{
+            display: none;
+        }
+    }
+
+    &__right-side {
+        max-width: 590px;
+        padding: 44px 0 0 0;
+        margin: 44px 0 0 0;
+        position: relative;
+        &:before{
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 24px;
+            height: 24px;
+            background-image: url(../img/case-studies/commas.svg);
+            background-size: 24px 24px;
+            background-repeat: no-repeat;
+            background-position: center;
+        }
+        p{
+            color: $whitecolor;
+            line-height: 32px;
+            font-weight: 400;
+            font-size: 20px;
+        }
+        h3{
+            color: $whitecolor;
+        }
+    }
+
+    &__bottom {
+        display: flex;
+        margin: 52px 0 0 0;
+        justify-content: space-between;
+    }
+
+    &__person {
+        max-width: 180px;
+        p{
+            opacity: 0.6;
+            font-size: 16px;
+            line-height: 20px;
+        }
+    }
+
+    &__company {
+        display: flex;
+        height: 100%;
+        max-height: 100%;
+        span{
+            padding: 0 24px 0 0;
+            box-sizing: content-box;
+            border-right: 1px solid $whitecolor;
+            max-width: 200px;
+            max-height: 30px;
+            img{
+                width: 100%;
+                height: 100%;
+                object-fit: contain;
+            }
+        }
+        svg{
+            width: 24px;
+            height: 24px;
+            fill: $whitecolor;
+            opacity: 0.8;
+            padding: 0 0 0 24px;
+            box-sizing: content-box;
+        }
+        &.mobile{
+            display: none;
+            justify-content: center;
+            margin: 40px 0 0 0;
+        }
+        &.desktop{
+            padding: 15px 0 0 0;
+        }
+    }
+}
+    @media(max-width: 1439px){
+        .quickbooks{
+            padding: 0 0 70px 0;
+            &:before{
+                top: 119px;
+                left: 16px;
+            }
+            &:after{
+                width: 317px;
+            }
+            .content{
+                .studies{
+                    margin: 0 20px 0 0;
+                    &__img{
+                        width: 342px;
+                        max-height: 531px;
+                    }
+                }
+            }
+        }
+        .comments{
+            &__right-side{
+                margin: 0;
+            }
+        }
+    }
+    @media(max-width: 1023px){
+        .quickbooks{
+            padding: 0;
+            &:before{
+                display: none;
+            }
+            &:after{
+                top: inherit;
+                bottom: 0;
+                height: 352px;
+                width: 100%;
+            }
+            .content{
+                flex-direction: column;
+                justify-content: inherit;
+                align-items: center;
+                padding: 0;
+                &__top-text{
+                    margin: 60px 0 0 0;
+                }
+                .studies{
+                    margin: 0;
+                    &__img{
+                        width: 100%;
+                        max-width: 335px;
+                        max-height: 456px;
+                        padding: 0;
+                        margin: 4px 0 0 0;
+                        top: 52px;
+                        &:after{
+                            display: none;
+                        }
+                    }
+                }
+            }
+        }
+        .comments{
+            &__img{
+                width: 286px;
+                height: 286px;
+            }
+            &__bottom{
+                flex-direction: column;
+            }
+            &__company{
+                margin: 20px 0 0 0;
+                &.desktop{
+                    padding: 0;
+                }
+            }
+            &__bottom{
+                align-items: flex-end;
+            }
+        }
+    }
+    @media(max-width: 767px){
+        .about{
+            &__block{
+                h3{
+                    font-size: 32px;
+                    line-height: 36px;
+                    margin: 0 0 32px 0;
+                }
+                flex-direction: column;
+            }
+            &__bg{
+                display: none;
+            }
+        }
+        .comments{
+            &__left-side{
+                display: none;
+            }
+            &__wrapper{
+                display: flex;
+            }
+            &__img{
+                width: 50px;
+                height: 50px;
+                border-radius: 50%;
+                margin: 0 12px 0 0;
+                &.mobile{
+                    display: block;
+                }
+            }
+            &__company{
+                &.desktop{
+                    display: none;
+                }
+                &.mobile{
+                    display: flex;
+                }
+            }
+            &__content{
+                padding: 40px 32px 40px;
+            }
+            &__bottom{
+                margin: 24px 0 0 0;
+                align-items: flex-start;
+            }
+        }
+    }
+    @media(max-width: 424px){
+        .quickbooks{
+            &__bread-crumbs{
+                font-size: 14px;
+            }
+            .content{
+                &__description{
+                    h1{
+                        margin: 24px 0 16px 0;
+                        font-size: 40px;
+                        line-height: 46px;
+                    }
+                    p{
+                        font-size: 20px;
+                        line-height: 28px;
+                    }
+                }
+                &__button{
+                    height: 52px;
+                    max-width: 187px;
+                    margin: 52px 0 0 0;
+                }
+            }
+        }
+        .comments{
+            padding: 80px 0;
         }
     }
 }
